@@ -1,0 +1,70 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://exemplorequisicao.com/spdata/receberequisicaospdata"
+           targetNamespace="https://exemplorequisicao.com/spdata/receberequisicaospdata" elementFormDefault="qualified">
+
+    <xs:element name="getAtendimentoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="atendimento" type="tns:atendimento"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAtendimentoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="tns:response"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="atendimento">
+        <xs:sequence>
+            <xs:element name="acao" type="xs:string"/>
+            <xs:element name="ato" type="xs:integer"/>
+            <xs:element name="id_atendimento" type="xs:integer"/>
+            <xs:element name="local_atendimento" type="xs:integer"/>
+            <xs:element name="paciente" type="tns:paciente"/>
+            <xs:element name="medico" type="tns:medico"/>
+            <xs:element name="exames" type="tns:exame" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="paciente">
+        <xs:sequence>
+            <xs:element name="id_paciente" type="xs:integer"/>
+            <xs:element name="nome_paciente" type="xs:string"/>
+            <xs:element name="data_nascimento" type="xs:date"/>
+            <xs:element name="sexo" type="xs:string"/>
+            <xs:element name="nome_mae" type="xs:string" minOccurs="0"/>
+            <xs:element name="bloco" type="xs:string"/>
+            <xs:element name="acomodacao" type="xs:string"/>
+            <xs:element name="leito" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="medico">
+        <xs:sequence>
+            <xs:element name="crm_medico" type="xs:integer"/>
+            <xs:element name="nome_medico" type="xs:string"/>
+            <xs:element name="uf_medico" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="exame">
+        <xs:sequence>
+            <xs:element name="acao" type="xs:string"/>
+            <xs:element name="id_lanc_exame" type="xs:integer"/>
+            <xs:element name="codigo_exame" type="xs:string"/>
+            <xs:element name="obs_exame" type="xs:string" minOccurs="0"/>
+            <xs:element name="urgencia" type="xs:string"/>
+            <xs:element name="codigo_material" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="response">
+        <xs:sequence>
+            <xs:element name="codigo" type="xs:string"/>
+            <xs:element name="mensagem" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

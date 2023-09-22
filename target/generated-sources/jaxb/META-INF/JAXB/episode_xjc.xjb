@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este arquivo foi gerado pela Eclipse Implementation of JAXB, v3.0.0 
+Consulte https://eclipse-ee4j.github.io/jaxb-ri 
+Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+Gerado em: 2023.09.22 às 01:58:22 PM BRT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="https://exemplorequisicao.com/spdata/receberequisicaospdata">
+    <schemaBindings map="false">
+      <package name="https.exemplorequisicao_com.spdata.receberequisicaospdata"/>
+    </schemaBindings>
+    <bindings scd="tns:getAtendimentoRequest">
+      <class ref="https.exemplorequisicao_com.spdata.receberequisicaospdata.GetAtendimentoRequest"/>
+    </bindings>
+    <bindings scd="~tns:atendimento">
+      <class ref="https.exemplorequisicao_com.spdata.receberequisicaospdata.Atendimento"/>
+    </bindings>
+    <bindings scd="tns:getAtendimentoResponse">
+      <class ref="https.exemplorequisicao_com.spdata.receberequisicaospdata.GetAtendimentoResponse"/>
+    </bindings>
+    <bindings scd="~tns:response">
+      <class ref="https.exemplorequisicao_com.spdata.receberequisicaospdata.Response"/>
+    </bindings>
+    <bindings scd="~tns:paciente">
+      <class ref="https.exemplorequisicao_com.spdata.receberequisicaospdata.Paciente"/>
+    </bindings>
+    <bindings scd="~tns:medico">
+      <class ref="https.exemplorequisicao_com.spdata.receberequisicaospdata.Medico"/>
+    </bindings>
+    <bindings scd="~tns:exame">
+      <class ref="https.exemplorequisicao_com.spdata.receberequisicaospdata.Exame"/>
+    </bindings>
+  </bindings>
+</bindings>
+
